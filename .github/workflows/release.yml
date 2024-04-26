@@ -43,7 +43,8 @@ jobs:
         uses: vimtor/action-zip@v1.2
         with:
           files: ${{ inputs.release_archive_file }}
-          dest: ${GITHUB_REF_NAME}.zip
+          dest: ${{ github.ref.name }}.zip
+
 
 #       - run: zip -r ${GITHUB_REF_NAME}.zip ${{ inputs.release_archive_file }}
 #         name: Prepare Artifact
