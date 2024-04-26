@@ -33,7 +33,7 @@ jobs:
               common/data/common artifactory_user | artifactory_user;
               common/data/common artifactory_password | artifactory_password ;
 
-       - run: env
+      - run: env
       #- run: curl -v --user ${{ steps.vault-secrets.outputs.artifactory_user }}:${{ steps.vault-secrets.outputs.artifactory_password }} --data-binary @1.0.0.zip -X PUT "http://artifactory-internal.rdevops6a.online:8081/artifactory/expense-backend/1.0.0.zip"
         name: Release Software
 
